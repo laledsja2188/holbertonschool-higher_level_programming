@@ -9,6 +9,11 @@ This repository contains projects and exercises for higher level programming con
 - **Description**: Learning to import functions and modules in Python
 - **Files**: 0-add.py through 5-variable_load.py
 
+### Python Data Structures
+- **Directory**: `python-data_structures/`
+- **Description**: Working with Python data structures - lists, tuples, and sequences
+- **Files**: 0-print_list_integer.py
+
 ### Holberton Printf
 - **Directory**: `holbertonschool-printf/`
 - **Description**: Custom implementation of the printf function in C
