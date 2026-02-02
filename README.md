@@ -12,7 +12,12 @@ This repository contains projects and exercises for higher level programming con
 ### Python Data Structures
 - **Directory**: `python-data_structures/`
 - **Description**: Working with Python data structures - lists, tuples, and sequences
-- **Files**: 0-print_list_integer.py
+- **Files**: 0-print_list_integer.py through 12-switch.py
+
+### Python More Data Structures
+- **Directory**: `python-more_data_structures/`
+- **Description**: Advanced data structures - sets, dictionaries, lambda functions
+- **Files**: 0-square_matrix_simple.py
 
 ### Holberton Printf
 - **Directory**: `holbertonschool-printf/`
