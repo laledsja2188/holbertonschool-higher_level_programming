@@ -1,0 +1,107 @@
+==================================
+How to use 5-text_indentation.py
+==================================
+
+This library has one function called ``text_indentation()``.
+
+``text_indentation()`` prints text with 2 new lines after each '.', '?' and ':'.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic usage with period:
+
+    >>> text_indentation("Hello. World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Basic usage with question mark:
+
+    >>> text_indentation("How are you? Fine")
+    How are you?
+    <BLANKLINE>
+    Fine
+
+Basic usage with colon:
+
+    >>> text_indentation("Name: John")
+    Name:
+    <BLANKLINE>
+    John
+
+Multiple special characters:
+
+    >>> text_indentation("Hi. How are you? Good: thanks.")
+    Hi.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Good:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
+
+No trailing spaces at beginning or end of line:
+
+    >>> text_indentation("Hello.   World")
+    Hello.
+    <BLANKLINE>
+    World
+
+    >>> text_indentation("   Hello. World")
+    Hello.
+    <BLANKLINE>
+    World
+
+No special characters - no new lines added:
+
+    >>> text_indentation("Hello World")
+    Hello World
+
+    >>> text_indentation("No specials here")
+    No specials here
+
+Empty string:
+
+    >>> text_indentation("")
+
+Single special characters:
+
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
+
+    >>> text_indentation("?")
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation(":")
+    :
+    <BLANKLINE>
+
+Text ending with exclamation (not special):
+
+    >>> text_indentation("Wow!")
+    Wow!
+
+Type error cases:
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(["Hello"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Missing arguments:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
