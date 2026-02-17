@@ -89,3 +89,13 @@ Edge cases:
     >>> matrix = [[1, 2, 3]]
     >>> matrix_divided(matrix, 0.5)
     [[2.0, 4.0, 6.0]]
+
+Infinity cases:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+    >>> matrix = [[100, 200, 300]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0]]
