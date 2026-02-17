@@ -19,18 +19,14 @@ def print_square(size):
     Prints:
         A square of '#' characters with given size
     """
-    # Check if size is a float (even if it could be converted to int)
     if isinstance(size, float):
         raise TypeError("size must be an integer")
-    
-    # Check if size is an integer
+
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
-    
-    # Check if size is negative
+
     if size < 0:
         raise ValueError("size must be >= 0")
-    
-    # Print the square
+
     for i in range(size):
         print("#" * size)
