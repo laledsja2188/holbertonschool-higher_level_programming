@@ -1,0 +1,85 @@
+===========================
+How to use 3-say_my_name.py
+===========================
+
+This library has one function called ``say_my_name()``.
+
+``say_my_name()`` prints a formatted name string.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Basic usage with both names:
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+Usage with first name only (default last name):
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+    >>> say_my_name("Alice")
+    My name is Alice 
+
+Empty strings:
+
+    >>> say_my_name("", "")
+    My name is  
+
+    >>> say_my_name("John", "")
+    My name is John 
+
+    >>> say_my_name("", "Doe")
+    My name is  Doe
+
+Type error cases - first_name validation:
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(None, "Smith")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name([], "Johnson")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Type error cases - last_name validation:
+
+    >>> say_my_name("John", 123)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Alice", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Bob", [])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Missing arguments cases:
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Special characters in names:
+
+    >>> say_my_name("Jean-Claude", "Van Damme")
+    My name is Jean-Claude Van Damme
+
+    >>> say_my_name("Mary", "O'Connor")
+    My name is Mary O'Connor
+
+Numbers as strings:
+
+    >>> say_my_name("Agent", "007")
+    My name is Agent 007
