@@ -1,0 +1,42 @@
+.TH HSH 1 "December 2024" "1.0" "Simple Shell Manual"
+.SH NAME
+hsh \- simple shell (command interpreter)
+.SH SYNOPSIS
+.B hsh
+.SH DESCRIPTION
+.B hsh
+is a simple command line interpreter that executes commands read from standard input.
+.PP
+When
+.B hsh
+is invoked, it displays a prompt and waits for user input. After reading a command line, it attempts to execute the command.
+.SH USAGE
+.PP
+Commands can be executed in two ways:
+.PP
+.B Interactive mode:
+.RS
+$ ./hsh
+.br
+$ /bin/ls
+.br
+$ exit
+.RE
+.PP
+.B Non-interactive mode:
+.RS
+$ echo "/bin/ls" | ./hsh
+.RE
+.SH BUILT-IN COMMANDS
+.TP
+.B exit
+Exit the shell
+.TP
+.B env
+Print environment variables
+.SH FILES
+No configuration files are used.
+.SH AUTHORS
+See AUTHORS file in the repository.
+.SH BUGS
+Probably has some bugs. Still learning.
